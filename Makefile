@@ -13,7 +13,8 @@ dependencies:
 	dep status
 
 test:
-	go test `go list ./... | grep -v vendor`
+	#go test `go list ./... | grep -v vendor`
+	GO15VENDOREXPERIMENT=1 go test `go list ./... | grep -v vendor`
 
 fixture:
 	mockery -print -dir mockery/fixtures -name RequesterVariadic > mockery/fixtures/mocks/requester_variadic.go
