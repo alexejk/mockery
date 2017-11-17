@@ -15,7 +15,7 @@ fixture:
 	mockery -print -dir mockery/fixtures -name RequesterVariadic > mockery/fixtures/mocks/requester_variadic.go
 
 install:
-	go install ./...
+	go install `go list ./... | grep -v vendor`
 
 integration:
 	rm -rf mocks
