@@ -1,7 +1,7 @@
 language: go
 
 # To ensure installation of dep binary to somewhere at reasonable PATH
-sudo: required
+#sudo: required
 
 env:
  - GO15VENDOREXPERIMENT=1
@@ -18,11 +18,14 @@ go:
 #  - tip
 
 before_script:
-  - sudo curl -L https://github.com/golang/dep/releases/download/v0.3.2/dep-linux-amd64 -o /usr/local/bin/dep
-  - sudo chmod +x /usr/local/bin/dep
-  - dep ensure
-  - dep prune
-  - ls -alh vendor/
-  - echo $GOPATH
-  - echo `pwd`
+#  - sudo curl -L https://github.com/golang/dep/releases/download/v0.3.2/dep-linux-amd64 -o /usr/local/bin/dep
+#  - sudo chmod +x /usr/local/bin/dep
+  - curl https://glide.sh/get | sh
+#  - dep ensure
+#  - dep prune
+  - glide install
   - go list ./...
+  - glide novendor
+  - go get github.com/sgotti/glide-vc
+  - glide-vc --no-tests --only-code
+

@@ -3,3 +3,5 @@ import:
   - package: github.com/stretchr/testify
     version: ^1.1.4
   - package: golang.org/x/tools
+    vcs: https://github.com/golang/tools.git
+    version: release-branch.go1.7

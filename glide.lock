@@ -1,5 +1,5 @@
-hash: 9286c8f9f0d54d8004c38ad511503a4e2dd74ec95f3394c0864b9b4b6a2c14b7
-updated: 2017-11-17T11:14:32.590859+01:00
+hash: 0038753681f9fde1a75e8549d36ffbc5c47ef7a3328c2e959635bbdc4c2c7f86
+updated: 2017-11-17T17:09:17.463104+01:00
 imports:
 - name: github.com/davecgh/go-spew
   version: 6d212800a42e8ab5c146b8ace3490ee17e5225f9
@@ -19,10 +19,11 @@ imports:
   - require
   - suite
 - name: golang.org/x/tools
-  version: 6d70fb2e85323e81c89374331d3d2b93304faa36
+  version: 6220cba6419b2bf78aad19d85c347ecc0fda2b53
   subpackages:
   - go/ast/astutil
   - go/buildutil
   - go/loader
   - imports
+  - imports"
 testImports: []
