@@ -10,9 +10,9 @@ fmt:
 	#go fmt $(glide novendor)
 
 test:
-	#go test $(glide novendor)
+	go test $(glide novendor)
 	#go test `go list ./... | grep -v /vendor/`
-	go test ./...
+	#go test ./...
 
 fixture:
 	mockery -print -dir mockery/fixtures -name RequesterVariadic > mockery/fixtures/mocks/requester_variadic.go
