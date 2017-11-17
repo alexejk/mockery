@@ -1,16 +1,12 @@
 SHELL=bash
 
-all: clean dependencies fmt test install fixture integration
+all: clean fmt test install fixture integration
 
 clean:
 	rm -rf mocks
 
 fmt:
 	go fmt `go list ./... | grep -v vendor`
-
-dependencies:
-	dep ensure
-	dep status
 
 test:
 	#go test `go list ./... | grep -v vendor`
