@@ -23,15 +23,15 @@
   version = "v1.1.4"
 
 [[projects]]
-  branch = "release-branch.go1.5"
+  branch = "release-branch.go1.7"
   name = "golang.org/x/tools"
-  packages = ["go/ast/astutil","go/buildutil","go/exact","go/loader","go/types","imports"]
-  revision = "d02228d1857b9f49cd0252788516ff5584266eb6"
+  packages = ["go/ast/astutil","go/buildutil","go/loader","imports"]
+  revision = "6220cba6419b2bf78aad19d85c347ecc0fda2b53"
   source = "https://github.com/golang/tools.git"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "7efd354ce1603fbc4fa2879984a8381b8464d78466e845fb067a23caecf3eb08"
+  inputs-digest = "8241176c6ec9476c7e807bc94bb72c27b046709e790a35efc9e23e5e6786a210"
   solver-name = "gps-cdcl"
   solver-version = 1

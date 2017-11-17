@@ -4,5 +4,5 @@
 
 [[constraint]]
   name = "golang.org/x/tools"
-  branch = "release-branch.go1.5"
+  branch = "release-branch.go1.7"
   source = "https://github.com/golang/tools.git"
