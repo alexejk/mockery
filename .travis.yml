@@ -23,5 +23,6 @@ before_script:
   - dep ensure
   - ls -alh vendor/
   - echo $GOPATH
+  - echo `pwd`
   - go list ./...
   - GO15VENDOREXPERIMENT=1 go list ./...
