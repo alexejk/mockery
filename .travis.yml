@@ -1,7 +1,7 @@
 language: go
 
 env:
- - GO15VENDOREXPERIMENT=1
+  - GO15VENDOREXPERIMENT=1
 
 # Allow use in forks
 go_import_path: github.com/vektra/mockery
