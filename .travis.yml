@@ -1,5 +1,8 @@
 language: go
 
+env:
+ - GO15VENDOREXPERIMENT=1
+
 # Allow use in forks
 go_import_path: github.com/vektra/mockery
 
@@ -8,9 +11,9 @@ go:
   - 1.6.x
   - 1.7.x
   - 1.8.x
+  - 1.9.x
   - tip
 
 before_script:
-  - go get ./...
-  # This package is used in tests only, so "go get" misses it
-  - go get github.com/stretchr/testify/assert
+  - go get -u github.com/golang/dep
+  - dep ensure
