@@ -6,10 +6,10 @@ clean:
 	rm -rf mocks
 
 fmt:
-	go fmt ./...
+	go fmt `go list ./... | grep -v vendor`
 
 test:
-	go test ./...
+	go test `go list ./... | grep -v vendor`
 
 fixture:
 	mockery -print -dir mockery/fixtures -name RequesterVariadic > mockery/fixtures/mocks/requester_variadic.go
