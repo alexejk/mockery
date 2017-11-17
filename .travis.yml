@@ -17,8 +17,5 @@ go:
 before_script:
   - curl https://glide.sh/get | sh
   - glide install
-  - go list ./...
-  - glide novendor
-  - go get github.com/sgotti/glide-vc
-  - glide-vc --no-tests --only-code --use-lock-file
+  - find vendor -name '*_test.go' -exec rm -f {} \;
 
