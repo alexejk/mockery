@@ -1,12 +1,16 @@
 SHELL=bash
 
-all: clean fmt test install fixture integration
+all: clean dependencies fmt test install fixture integration
 
 clean:
 	rm -rf mocks
 
 fmt:
 	go fmt `go list ./... | grep -v vendor`
+
+dependencies:
+	dep ensure
+	dep status
 
 test:
 	go test `go list ./... | grep -v vendor`
@@ -15,7 +19,7 @@ fixture:
 	mockery -print -dir mockery/fixtures -name RequesterVariadic > mockery/fixtures/mocks/requester_variadic.go
 
 install:
-	go install `go list ./... | grep -v vendor`
+	go install `go list ./... | grep -v /vendor/`
 
 integration:
 	rm -rf mocks
