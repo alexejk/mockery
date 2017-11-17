@@ -27,5 +27,5 @@ before_script:
   - go list ./...
   - glide novendor
   - go get github.com/sgotti/glide-vc
-  - glide-vc --no-tests --only-code
+  - glide-vc --no-tests --only-code --use-lock-file
 
